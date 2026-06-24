@@ -128,7 +128,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Is it safe to take daily?",
-    a: "Yes, when used as directed (one tablespoon per day). Each serving contains 150 mg caffeine and 2,000 mg beta-alanine, which may cause a harmless tingling sensation. Consult your physician if pregnant, nursing, or taking medications.",
+    a: "Yes, when used as directed (one tablespoon per day). Contains 150 mg caffeine and 2,000 mg beta-alanine, which may cause a harmless tingling sensation. Consult your physician if pregnant, nursing, or taking medications.",
   },
   {
     q: "What does it taste like?",

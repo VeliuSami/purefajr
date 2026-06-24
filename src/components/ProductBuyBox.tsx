@@ -36,7 +36,6 @@ export function ProductBuyBox() {
     : variant!.compareAtCents;
   const totalCents = isBundle ? unitPrice : unitPrice * quantity;
 
-  const perServing = formatPrice(Math.round(unitPrice / 30));
   const savingsPercent = isBundle
     ? PRODUCT.bundle.savingsPercent
     : variant!.savingsPercent;
@@ -203,12 +202,6 @@ export function ProductBuyBox() {
         </div>
       )}
 
-      {/* Per serving anchor */}
-      {!isBundle && (
-        <p className="text-xs text-ink-muted text-center mb-4">
-          ≈ {perServing}/day · 30 servings per jar
-        </p>
-      )}
 
       {/* CTA */}
       <button

@@ -52,12 +52,7 @@ export function Ingredients() {
           <article className="bg-ink text-cream-50 p-6 sm:p-8 sm:col-span-2 lg:col-span-1 flex flex-col justify-between">
             <div>
               <p className="label-caps text-orange-400 mb-4">Supplement Facts</p>
-              <p className="text-sm text-cream-300 leading-relaxed">
-                Serving size: 1 tbsp (15 ml)
-                <br />
-                Servings per container: 30
-              </p>
-              <div className="mt-4 space-y-2 border-t border-cream-50/10 pt-4">
+              <div className="space-y-2">
                 {INGREDIENTS.slice(1).map((item) => (
                   <div key={item.name} className="flex justify-between text-xs">
                     <span className="text-cream-300">{item.name}</span>

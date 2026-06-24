@@ -57,15 +57,12 @@ function InfoSlide() {
           Pure Fajr
         </p>
         <p className="label-caps text-orange-400 text-[0.55rem]">
-          8 oz · 30 servings
+          8 oz
         </p>
       </div>
 
       {/* Supplement-style facts table */}
       <div className="flex-1 px-4 sm:px-6 py-3">
-        <p className="label-caps text-cream-400 text-[0.55rem] mb-2">
-          Serving Size: 1 tbsp (15 ml)
-        </p>
 
         <div className="divide-y divide-cream-50/8">
           {INGREDIENTS.map((ing) => (
