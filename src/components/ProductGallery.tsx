@@ -64,7 +64,7 @@ function InfoSlide() {
       {/* Supplement-style facts table */}
       <div className="flex-1 px-4 sm:px-6 py-3">
         <p className="label-caps text-cream-400 text-[0.55rem] mb-2">
-          Serving Size: 1 tbsp (15 ml) · Servings per container: 30
+          Serving Size: 1 tbsp (15 ml)
         </p>
 
         <div className="divide-y divide-cream-50/8">
