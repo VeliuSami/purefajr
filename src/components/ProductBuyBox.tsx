@@ -54,6 +54,12 @@ export function ProductBuyBox() {
 
       const data = await res.json();
 
+      if (data.notConfigured) {
+        setError("checkout-soon");
+        setLoading(false);
+        return;
+      }
+
       if (!res.ok) {
         throw new Error(data.error ?? "Something went wrong");
       }
@@ -224,11 +230,21 @@ export function ProductBuyBox() {
         )}
       </button>
 
-      {error && (
+      {error === "checkout-soon" ? (
+        <div className="mt-3 p-3 bg-cream-100 border border-cream-300 text-center" role="alert">
+          <p className="text-sm font-medium text-ink">Checkout coming soon</p>
+          <p className="text-xs text-ink-muted mt-1">
+            Email us to order:{" "}
+            <a href="mailto:samkosunnah@gmail.com" className="text-orange-600 underline">
+              samkosunnah@gmail.com
+            </a>
+          </p>
+        </div>
+      ) : error ? (
         <p className="text-red-600 text-sm text-center mt-3" role="alert">
           {error}
         </p>
-      )}
+      ) : null}
 
       {/* Trust row */}
       <div className="grid grid-cols-3 gap-2 mt-5 pt-5 border-t border-cream-200">

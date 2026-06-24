@@ -16,6 +16,11 @@ function isValidMode(mode: string): mode is CheckoutMode {
 }
 
 export async function POST(request: NextRequest) {
+  // Stripe not yet configured — return a friendly signal to the front-end
+  if (!process.env.STRIPE_SECRET_KEY) {
+    return NextResponse.json({ notConfigured: true }, { status: 503 });
+  }
+
   try {
     const body = await request.json();
     const { mode, quantity = 1 } = body as {
